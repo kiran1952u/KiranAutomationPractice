@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -11,8 +12,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class demosite {
 
 	public static void main(String[] args) throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
-        ChromeDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver(options);
         driver.get("https://www.techlistic.com/p/selenium-practice-form.html");
         driver.manage().window().maximize();
         driver.findElement(By.name("firstname")).sendKeys("kiran");

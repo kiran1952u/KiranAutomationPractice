@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>dd</groupId>
-  <artifactId>dd</artifactId>
+  <artifactId>kiranAutomationCodePrac</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
 
@@ -44,11 +44,20 @@
 
 <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
     <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+      <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+      <dependency>
+          <groupId>io.github.bonigarcia</groupId>
+          <artifactId>webdrivermanager</artifactId>
+          <version>5.6.3</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
-    <version>5.6.2</version>
+    <version>5.6.3</version>
 </dependency>
+
+
 
 
 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
@@ -66,11 +75,18 @@
   <groupId>org.slf4j</groupId>
   <artifactId>slf4j-simple</artifactId>
   <version>1.7.21</version>
+
+
 </dependency>
+      <dependency>
+          <groupId>org.jetbrains</groupId>
+          <artifactId>annotations</artifactId>
+          <version>RELEASE</version>
+          <scope>compile</scope>
+      </dependency>
 
 
-
-</dependencies>
+  </dependencies>
 
   <build>
     <sourceDirectory>src</sourceDirectory>

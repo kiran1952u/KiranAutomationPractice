@@ -5,13 +5,16 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class demo {
 
 	public static void main(String[] args) throws InterruptedException {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
 
-		WebDriverManager.chromedriver().setup();
-        ChromeDriver driver1 = new ChromeDriver();
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver1 = new ChromeDriver(options);
         driver1.get("https://gor-pathology.web.app/");
         driver1.findElement(By.xpath("/html/body/div[2]/div/div/form/div[1]/div/input")).sendKeys("test@kennect.io");
         driver1.findElement(By.xpath("/html/body/div[2]/div/div/form/div[2]/div/input")).sendKeys("Qwerty@1234");

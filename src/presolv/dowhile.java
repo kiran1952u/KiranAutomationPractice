@@ -5,12 +5,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class dowhile {
 
 	public static void main(String[] args) {
-		 WebDriverManager.chromedriver().setup();
-	        ChromeDriver driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver = new ChromeDriver(options);
 	        driver.get("https://bridge-bu.dollarbull.co.in/");
 
 	        WebElement umn = driver.findElement(By.id("email_id"));

@@ -6,6 +6,7 @@
       <class name="presolv.Automationprac">
         <methods>
           <include name="f"/>
+          <include name="f11"/>
         </methods>
       </class> <!-- presolv.Automationprac -->
     </classes>
