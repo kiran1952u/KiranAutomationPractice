@@ -36,5 +36,3 @@ public class JunaDataprovider {
         };
     }
 }
-
-//qakn4@mailinator.com
