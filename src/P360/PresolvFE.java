@@ -1,4 +1,4 @@
-package presolv;
+package P360;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 @Test(dataProvider = "userData")
 public class PresolvFE {
-    public void  BusinessE (String  name,String orgname,String number , String email) throws InterruptedException {
+    public void BusinessE(String name, String orgname, String number, String email) throws InterruptedException {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
 
@@ -42,29 +42,13 @@ public class PresolvFE {
                 {"Rishabh Pant", "Presolv360", "9137252554", "rishabh@presolv360.com"},
 
 
-
-
         };
 
 
-                // Add more sets of data as needed
+        // Add more sets of data as needed
 
-        }
-      public void ff (){
-          ChromeOptions options = new ChromeOptions();
-          options.addArguments("--remote-allow-origins=*");
-
-          WebDriverManager.chromedriver().setup();
-          ChromeDriver driver = new ChromeDriver(options);
-
-
-          driver.get("https://presolv360.com/");
-          driver.manage().window().maximize();
-
-
-
-
-        }
     }
+
+}
 
 

@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
     <parameter name="browser" value="Firefox"/>
-    <parameter name="url" value="https://www.google.com"/>
+    <parameter name="url" value="https://vegamovies.ong/"/>
     <test name="ParameterTest">
         <classes>
             <class name="presolv.ParameterTest"/>
