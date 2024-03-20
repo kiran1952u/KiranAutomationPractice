@@ -4,7 +4,7 @@
     <suite-files>
         <suite-file path="./testng.xml"></suite-file>
         <suite-file path="./Regression.xml"></suite-file>
-        <suite-file path="./testing.xml"></suite-file>
+        <suite-file path="src/presolv/testing.xml"></suite-file>
 
     </suite-files>
 </suite> <!-- Suite -->

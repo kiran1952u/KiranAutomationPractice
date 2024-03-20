@@ -5,7 +5,7 @@
     <parameter name="url" value="https://vegamovies.ong/"/>
     <test name="ParameterTest">
         <classes>
-            <class name="presolv.ParameterTest"/>
+            <class name="presolv.ListenerDemoTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 import javax.swing.text.html.CSS;
@@ -12,13 +13,11 @@ import javax.swing.text.html.CSS;
 public class DeleteArbitrator {
     @Test
     public void deletearbitrator() throws InterruptedException {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
+       ChromeOptions options = new ChromeOptions();
+       options.addArguments("--remote-allow-origins=*");
 
-        WebDriverManager.chromedriver().setup();
-        ChromeDriver driver = new ChromeDriver(options);
-
-
+       WebDriverManager.chromedriver().setup();
+       ChromeDriver driver = new ChromeDriver(options);
         driver.get("https://testing.presolv360.com/superaccess");
         driver.manage().window().maximize();
         driver.findElement(By.name("username")).sendKeys("superadmin@presolv360.com");
@@ -49,7 +48,7 @@ public class DeleteArbitrator {
         driver.findElement(By.xpath("//*[@id=\"smkform\"]/div[9]/div/div/select/option[1]")).click();
         driver.findElement(By.xpath("/html/body/div[2]/div/div/section/div/div/button")).click();
         Thread.sleep(3000);
-        driver.findElement(By.cssSelector("a[class='btn ybigbtn']")).click();
+
 
 
     }
