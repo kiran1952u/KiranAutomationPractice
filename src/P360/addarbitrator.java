@@ -13,11 +13,8 @@ public class addarbitrator {
     public void loginpage() throws InterruptedException {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
-
         WebDriverManager.chromedriver().setup();
         ChromeDriver driver = new ChromeDriver(options);
-
-
         driver.get("https://testing.presolv360.com/superaccess");
         driver.manage().window().maximize();
         driver.findElement(By.name("username")).sendKeys("superadmin@presolv360.com");
@@ -64,10 +61,6 @@ public class addarbitrator {
         driver.findElement(By.xpath("/html/body/div[2]/div/section/div/div[1]/div[2]/form/button")).click();
         Thread.sleep(3000);
         driver.quit();
-
-
-
-
 
     }
 

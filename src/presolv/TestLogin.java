@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class TestLogin {
 
 
-    public void TestLoginPage() {
+    public void TestLoginPage() throws InterruptedException {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
 
@@ -18,14 +18,17 @@ public class TestLogin {
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("https://parabank.parasoft.com/parabank/index.htm");
         driver.manage().window().maximize();
-//        driver.findElement(By.id("username")).sendKeys("student");
-//        driver.findElement(By.name("password")).sendKeys("Password123");
-//        driver.findElement(By.id("submit")).click();
-//        driver.findElement(By.xpath("/html/body/div/div/header/div[3]/div[1]/div/div[2]/div/nav/ul/li[1]/a")).click();
-//        driver.findElement(By.xpath("/html/body/div/div/header/div[3]/div[1]/div/div[2]/div/nav/ul/li[2]/a")).click();
-//        driver.findElement(By.xpath("//a[normalize-space()='Courses']")).click();
-//        driver.findElement(By.xpath("//a[normalize-space()='Blog']")).click();
-//        driver.findElement(By.xpath("//a[normalize-space()='Contact']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.id("username")).sendKeys("student");
+        Thread.sleep(3000);
+        driver.findElement(By.name("password")).sendKeys("Password123");
+        Thread.sleep(3000);
+        driver.findElement(By.id("submit")).click();
+        driver.findElement(By.xpath("/html/body/div/div/header/div[3]/div[1]/div/div[2]/div/nav/ul/li[1]/a")).click();
+        driver.findElement(By.xpath("/html/body/div/div/header/div[3]/div[1]/div/div[2]/div/nav/ul/li[2]/a")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='Courses']")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='Blog']")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='Contact']")).click();
         driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/div/p[2]/a")).click();
         driver.findElement(By.name("customer.firstName")).sendKeys("kiran");
         driver.findElement(By.name("customer.lastName")).sendKeys("nika");
@@ -75,11 +78,10 @@ public class TestLogin {
 
             }
 
-
             @Test
             public class AdminPage {
 
-                public void     DataAccessMode() {
+                public void DataAccessMode() {
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--remote-allow-origins=*");
 
@@ -94,8 +96,12 @@ public class TestLogin {
                     driver.findElement(By.name("endpoint")).sendKeys("skjhdfks");
                     driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[2]/form/input")).click();
                     driver.findElement(By.name("action")).click();
-                    driver.findElement(By.xpath("//button[normalize-space()='Clean']")).click();
-                    driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[2]/table/tbody/tr/td[2]/form/table/tbody/tr/td[3]/input")).click();
+                    driver.findElement(By.xpath("//*[@id=\"adminForm\"]/input")).click();
+                    driver.get("https://parabank.parasoft.com/parabank/index.htm");
+                    driver.navigate().back();
+                    driver.navigate().forward();
+                    driver.navigate().back();
+                    driver.navigate().back();
 
 
                 }

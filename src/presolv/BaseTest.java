@@ -20,7 +20,7 @@ public class BaseTest {
 }
     @AfterSuite
     public void Closingbrowser(){
-        driver.close();
+//        driver.close();
 
     }
 }

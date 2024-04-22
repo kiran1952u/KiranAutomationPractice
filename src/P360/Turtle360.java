@@ -40,26 +40,6 @@ public class Turtle360 {
 
 
         }
-        //    @Test
-        //    public void  AssignementModule () throws InterruptedException {
-        //        ChromeOptions options = new ChromeOptions();
-        //        options.addArguments("--remote-allow-origins=*");
-        //
-        //        WebDriverManager.chromedriver().setup();
-        //        ChromeDriver driver = new ChromeDriver(options);
-        //
-        //        driver.get("https://turtle.presolv360.com/app/home");
-        //        Thread.sleep(2000);
-        //        WebElement targetElement = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/ul/li[2]/a/div"));
-        //
-        //        // Perform actions on the element (e.g., print its text)
-        //
-        //       targetElement.click();
-        //
-        //
-        //
-        //
-        //
-        //    }
+
     }
 }
